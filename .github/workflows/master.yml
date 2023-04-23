@@ -12,6 +12,7 @@ on:
       branches: [ master ]
       paths:
         - 'force-app/**'
+    workflow_dispatch:
 
 env:
   WAIT: 120 # minutes to wait for deploy command to finish
