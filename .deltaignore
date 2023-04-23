@@ -1,0 +1,33 @@
+# Ignore the entitlement process from delta package as one canot deplly entitlement process with active records using it
+
+# Deploying entitlement process will be handled as Post-Deployment Process
+
+\*_/entitlementProcesses/_
+
+# SIT Deployment Challenges
+
+# Ignore due to mismatch in target environment of dependencies
+
+**/unfiled$public/Customer_Open_Sales_Ops_Tickets_SK
+**/profiles/Pardot\*
+
+# Old Reports and Report Types ##SIT Deploy 24-Oct-2022##
+
+force-app/main/default/applications/standard\_\_LightningSales.app-meta.xml
+
+# added the below role since it was causing validation errors due to change in Org wide sharing of case
+
+force-app/main/default/roles/Off_Shore_Operations.role-meta.xml
+
+# removed the below to exclude Email-To-Case configuration to override in the Org from source
+force-app/main/default/settings/Case.settings-meta.xml
+
+# Ignore production URL
+
+force-app/main/default/tabs/MCC_Attachments.tab-meta.xml
+
+# ignore assignment rules (for tst environment - due to missing user[s])
+force-app/main/default/assignmentRules/Case.assignmentRules-meta.xml
+
+# ignore Opp Record Type as per Known Issue. Picklist values longer than 255 chars
+force-app/main/default/objects/Opportunity/recordTypes/ABSOpportunityRecordTypeAVCTCV.recordType-meta.xml

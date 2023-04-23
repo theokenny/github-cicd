@@ -1,0 +1,33 @@
+# Ignore removed profiles from delta diff destructive changes 
+**/profiles/Analytics Cloud Integration User.profile-meta.xml
+**/profiles/Analytics Cloud Security User.profile-meta.xml
+**/profiles/B2BMA Integration User.profile-meta.xml
+**/profiles/Billing Disputes Profile.profile-meta.xml
+**/profiles/Book Exam Profile.profile-meta.xml
+**/profiles/Chatter External User.profile-meta.xml
+**/profiles/Chatter Free User.profile-meta.xml
+**/profiles/Chatter Moderator User.profile-meta.xml
+**/profiles/Chatter Only User.profile-meta.xml
+**/profiles/Colocation Requests Profile.profile-meta.xml
+**/profiles/ContractManager.profile-meta.xml
+**/profiles/Customer Community Login User.profile-meta.xml
+**/profiles/Customer Portal Manager Custom.profile-meta.xml
+**/profiles/CustomerDetails Profile.profile-meta.xml
+**/profiles/Guest License User.profile-meta.xml
+**/profiles/Identity User.profile-meta.xml
+**/profiles/Lead ABS Profile.profile-meta.xml
+**/profiles/Managed Customers Profile.profile-meta.xml
+**/profiles/MarketingProfile.profile-meta.xml
+**/profiles/Minimum Access - Salesforce.profile-meta.xml
+**/profiles/Premier Support User.profile-meta.xml
+**/profiles/Provisioning Profile.profile-meta.xml
+**/profiles/Read Only.profile-meta.xml
+**/profiles/SQ Profile.profile-meta.xml
+**/profiles/Sales Insights Integration User.profile-meta.xml
+**/profiles/SolutionManager.profile-meta.xml
+**/profiles/Standard.profile-meta.xml
+**/profiles/TESubTasks Profile.profile-meta.xml
+**/profiles/Test Site 1 Profile.profile-meta.xml
+**/profiles/Trouble Tickets Profile.profile-meta.xml
+**/profiles/Web To Lead - Internal - ABS Profile.profile-meta.xml
+**/profiles/Web To Lead - Internal WSL Profile.profile-meta.xml
