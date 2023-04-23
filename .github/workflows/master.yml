@@ -67,6 +67,7 @@ jobs:
 
             - name: 'Installing sfdx git delta'
               run: | 
+                  echo ${{ secrets.MASTER_USERNAME }}
                   echo y | sfdx plugins:install sfdx-git-delta 
                   sfdx plugins 
 
@@ -89,7 +90,7 @@ jobs:
             - name: 'Populate auth file with SFDX_URL secret of integration org'
               shell: bash
               run: |
-                  echo ${{ secrets.MASTER_USERNAME }} | sfdx force:auth:sfdxurl:store -a targetOrg --sfdxurlfile=/dev/stdin
+                  echo ${{ secrets.MASTER_URL_PROD }} | sfdx force:auth:sfdxurl:store -a targetOrg --sfdxurlfile=/dev/stdin
 
             # We use SFDX Git Delta to create a directory with only the metadata that has changed.
             # this allows us to deploy only those changes, as opposed to deploying the entire branch. 
