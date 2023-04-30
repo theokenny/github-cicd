@@ -17,6 +17,7 @@ export default class TimerApp extends LightningElement {
 	}
 	//Start timer
 	startTimer() {
+		console.log('Start Timer');
 		if (this.running) {
      		this.running = false;
      		this.timerId = setInterval(() => {
@@ -32,11 +33,13 @@ export default class TimerApp extends LightningElement {
 	}
 
 	displayTime(sec) {
+		console.log('Display Timer');
 		this.minutes = Math.floor(sec / 60);
 		this.seconds = Math.floor(sec % 60);
 		return `${this.minutes < 10? '0':''}${this.minutes}:${this.seconds<10?'0':''}${this.seconds}`;
 	}
 	stopTimer() {
+		console.log('Stop Timer');
 		if (!this.running) {
 			this.running = true;
 			clearInterval(this.timerId);
@@ -44,6 +47,7 @@ export default class TimerApp extends LightningElement {
 	}
 
 	resetTimer() {
+		console.log('Reset Timer');
 		this.timer = 70;
 		this.running = false;
 		clearInterval(this.timerId);
