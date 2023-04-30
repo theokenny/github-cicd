@@ -32,7 +32,7 @@ jobs:
         if: ${{ github.actor != 'dependabot[bot]' }}
         steps:
             # Now we install nodejs in the VM, and specify version 14
-            - uses: docker//adammbest/sfdx:latest
+            - uses: docker://adammbest/sfdx:latest
 
             # The idea is that the VM can access your remote repository
             # because your repository is an sfdx project.
