@@ -27,7 +27,24 @@ jobs:
         # can specify which OS this VM should run on. 
         # In this case, we are going to run our commands on the latest version
         # of ubuntu
-        image: adammbest/sfdx:latest
+        #start here
+        runs-on: ubuntu-latest
+        if: ${{ github.actor != 'dependabot[bot]' }}
+        steps:
+            # Now we install nodejs in the VM, and specify version 14
+            - uses: docker//adammbest/sfdx:latest
+
+            # The idea is that the VM can access your remote repository
+            # because your repository is an sfdx project.
+            # This is a default action that allows us to enter the root 
+            # directory of the repository
+
+            # Make sure to specify fetch-depth:0. This allows us to
+            # access previous commits that have been pushed to the repository.
+
+            # We'll need this later when we try to figure out which metadata has 
+            # changed between commits, so that we can only deploy that metadata
+            # to the destination org
 
             # The URL is stored in the Github Secret named SFDX_INTEGRATION_URL
             # so here we store the URL into a text file
