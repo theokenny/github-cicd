@@ -129,4 +129,4 @@ jobs:
                   NUMBER_OF_COMPONENTS=$(cat changed-sources/package/package.xml | grep -o "<members" | wc -l)
                   echo "Deploying $NUMBER_OF_COMPONENTS components (based on package.xml)"
                   echo "Test level set to : $TEST_LEVEL"
-                  sfdx force:source:deploy -p "changed-sources/force-app" --checkonly -u $CICD_USER --testlevel NoTestRun
+                  sfdx force:source:deploy -p "changed-sources/force-app" --checkonly -u $CICD_USER
